@@ -226,6 +226,8 @@ describe('DoublyLinkedList', () => {
     expect(node).toBeDefined();
     expect(node.value.value).toBe(2);
     expect(node.value.customValue).toBe('test2');
-    expect(linkedList.find({ value: 2, customValue: 'test5' })).toBeNull();
+    expect(linkedList.find({
+      value: { value: 2, customValue: 'test5' }
+    })).toBeNull();
   });
 });
